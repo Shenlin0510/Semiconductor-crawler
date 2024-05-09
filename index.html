@@ -1,0 +1,1218 @@
+
+            <html>
+                <head>
+                    <title>News Articles</title>
+                    <script>
+                        //載入頁面時預設摘要是隱藏的
+                        window.onload = function() {
+                            var summaryElements = document.getElementsByClassName("summary");
+                            var matureSummarys = document.getElementsByClassName("mature-summary")
+                            var foundrySummarys = document.getElementsByClassName("foundry-summary")
+                            var otherSummarys = document.getElementsByClassName("other-summary")
+                            
+                            for (var i = 0; i < summaryElements.length; i++) {
+                                summaryElements[i].style.display = "none";  
+                            }
+                            for (var i = 0; i < matureSummarys.length; i++){
+                                matureSummarys[i].style.display = "none";
+                            }
+                            for (var i = 0; i < foundrySummarys.length; i++ ){
+                                foundrySummarys[i].style.display = "none";
+                            }
+                            for (var i = 0; i < otherSummarys.length; i++){
+                                otherSummarys[i].style.display = "none";
+                            }
+                        };
+
+                        function toggleContent(index) {
+                            var moreContent = document.getElementsByClassName("summary")[index];
+                            var moreLink = document.getElementsByClassName("more-link")[index];
+                            if (moreContent.style.display === "none") {
+                                moreContent.style.display = "block";
+                                moreLink.textContent = "點擊收起";
+                            } else {
+                                moreContent.style.display = "none";
+                                moreLink.textContent = "內容摘要（點擊展開）";
+                            }
+                        }
+                        function toggleMatureContent(index) {
+                            var moreContent = document.getElementsByClassName("mature-summary")[index];
+                            var moreLink = document.getElementsByClassName("mature-more-link")[index];
+                            if (moreContent.style.display === "none") {
+                                moreContent.style.display = "block";
+                                moreLink.textContent = "點擊收起";
+                            } else {
+                                moreContent.style.display = "none";
+                                moreLink.textContent = "內容摘要（點擊展開）";
+                            }
+                        }
+                        function togglefoundryContent(index) {
+                            var moreContent = document.getElementsByClassName("foundry-summary")[index];
+                            var moreLink = document.getElementsByClassName("foundry-more-link")[index];
+                            if (moreContent.style.display === "none") {
+                                moreContent.style.display = "block";
+                                moreLink.textContent = "點擊收起";
+                            } else {
+                                moreContent.style.display = "none";
+                                moreLink.textContent = "內容摘要（點擊展開）";
+                            }
+                        }
+                        function toggleotherContent(index) {
+                            var moreContent = document.getElementsByClassName("other-summary")[index];
+                            var moreLink = document.getElementsByClassName("other-more-link")[index];
+                            if (moreContent.style.display === "none") {
+                                moreContent.style.display = "block";
+                                moreLink.textContent = "點擊收起";
+                            } else {
+                                moreContent.style.display = "none";
+                                moreLink.textContent = "內容摘要（點擊展開）";
+                            }
+                        }
+                    </script>
+                    <style>
+                        
+                        body{
+                            background-image : url('img/MI_temp.jpg');
+                            background-size: 100%, 100%;
+                          
+                            background-position: top; 
+                            background-repeat: no-repeat; 
+                        }
+                        
+                        .theme{
+                            
+                            font-size: 50px;
+                            text-align: center;
+                            margin-top: 120px;
+                            color:darkblue; 
+                        }
+                        
+                        .application{
+                            color: #0000CC;
+                            font-size: 30px;
+                            font-family: Arial,
+                        }
+                        
+                        .title a:lang(en),
+                        .titles a:lang(en){
+                            color: #009FCC;
+                            font-size: 16pt;
+                            font-family: Arial;
+                        }
+                        
+
+                        .title a,
+                        .titles a{
+                            color: #009FCC;
+                            font-size: 16pt;
+                            font-family: "Microsoft JhengHei", sans-serif;
+                        }
+                        
+                        .title b,
+                        .titles b{
+                            color: #009FCC;
+                            font-size: 16pt;
+                            font-family: "Microsoft JhengHei", sans-serif;
+                        }
+                        
+
+                        #content {
+                            font-size: 14pt;
+                            font-family: "Microsoft JhengHei", sans-serif;
+                            font-weight: bold;
+                            margin-bottom: 20px;
+                            margin-top: 20px;
+                            width: auto;
+                            display: inline-block;
+                        }
+                        
+                        .summary,
+                        .mature-summary,
+                        .foundry-summary,
+                        .other-summary{
+                            font-size: 14pt;
+                            font-family: "Microsoft JhengHei", sans-serif;
+                            font-weight: bold;
+                            display: none;
+                            width: auto;
+                            display: inline-block;
+                            margin-bottom: 10px;
+                            margin-top: 10px;
+                        }
+                        
+                       
+                        .more-link,
+                        .mature-more-link,
+                        .foundry-more-link
+                        .other-more-link {
+                            margin-left: 10px;
+                        }
+                        
+                        h2 {
+                            font-family: Arial, sans-serif;
+                        }
+                        
+                        h1{
+                            font-family:Arial, sans-serif;
+                        }
+                        
+
+                    </style>
+                </head>
+        <h1 class="theme"><b>240509_Supply Chain Daily News </b></h1><br>
+            <body>
+                <h2 class="application">Booming Application</h2>
+                
+                <body>
+                    <div class="title">
+                    <a href= https://www.ctee.com.tw/news/20240508701583-430501>
+                    
+                        <b>1. 晶片廠擠破頭搶生意！小米電動車賣爆 這家喜奪大肥單 (Source: 工商時報)</b>
+                    </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div id="content">
+                    德國車用晶片大廠英飛凌（Infineon）與小米簽訂協議，將為小米電動車SU7供應先進的功率晶片直到2027年，以進軍中國及其他地區不斷成長的電動車市場。英飛凌表示，此次合作可以「鞏固英飛凌在汽車半導體市場的全球領先地位」。國際能源總署（IEA）數據顯示，去年全球電動車銷量達到1,400萬輛創紀錄，高達95%來自中國、歐洲和美國，其中，最大電動車市場是中國、銷量近60%。報導指出，除了英飛凌，多家晶片製造商也關注大陸的車用半導體市場。
+                    </div>
+                
+            </body>
+        
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691828_L7O7U9553O9YVJ7UYOQLV">
+                        
+                            <b>2. 英飛凌CEO：中國電動車勢頭強勁　歐盟電動車市場將於2025年復甦 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="more-link" onclick="toggleContent(0); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="summary">
+                        德國半導體大廠英飛凌看好中國大陸汽車市場強勁復甦，同時預期歐洲電動車市場將於2025年回溫。英飛凌執行長表示，中國車用晶片需求強勁，相較之下，歐洲和美國則相對疲弱。但預期歐盟電動車市場將從2025年起復甦。英飛凌超過半數的營收來自汽車領域，打入小米SU7供應鏈，拓展中國電動車市場。晶片商也面臨到客戶調整庫存帶來的衝擊，導致工業應用及消費性產品的需求減緩。英飛凌預估第3季整體部門營利率會達到10幾%的高檔；相較之下，分析師預估平均值為20.9%。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/5612/7951832?from=edn_subcatelist_cate">
+                        
+                            <b>3. 和勤精機第1季EPS 0.33元 為近七季新高 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="more-link" onclick="toggleContent(1); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="summary">
+                        高端精密沖壓大廠和勤精機公布第一季財報，合併營收達6.51億元，年增35.3%，稅後純益達2,716萬元，每股稅後純益為0.33元，為近七季新高。和勤在疫情前布局的商用車變速箱零件、車用零件在地化的訂單，陸續於去年下半年量產，新品在今年仍是快速爬坡階段，助力公司在淡季之中仍能繳出超越去年旺季的亮麗成績。展望未來，和勤表示今年下半年還有新品開始批次量產，另外多項乘用車的平台件或暢銷車款零件新訂單也會陸續出貨。在新能源車零件方面，和勤也有多項新訂單，隨著下半年新品營收貢獻提升，旺季獲利表現值得期待。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691798_6DI6FF2BLLBENR7O1M9WA">
+                        
+                            <b>4. 電動車需求不振　Magna訂單兩面受挫 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="more-link" onclick="toggleContent(2); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="summary">
+                        加拿大麥格納（Magna）的奧地利廠因受到電動車需求不振的影響，兩面受挫，新創車廠停單重擊，老字號車廠訂單後繼無力拖累。不過，該廠後續表現仍不悲觀，因為有新單可望進駐。另外，麥格納正計劃在美國密西根東南部加碼投資、以增加在地就業率。麥格納是亞洲汽車供應鏈關注的焦點之一，除品牌外、可整車代工商業模式正源於麥格納，更是不少新興Tier 1的效法對象，例如中國的華為、台灣的鴻海等。未來三年，麥格納旗下奧地利Ｍagna Steyr廠將面臨艱難挑戰，首先是受美國Fisker Ocean停產衝擊，該廠將裁員500人。在此廠投產還包括BMW 5系列也停產、Jaguar的E-Pace及I-Pace也將在11月逐步停產，2026年同平台的BMW Z4、豐田（Toyota）Supra也將結束。不過，賓士（Mercedes-Benz）G-Class生產仍繼續、隨後可望再添電動G-Class。麥格納期望中系車廠為該廠帶來新轉機。在美國，麥格納正計劃擴大美國密西根州東南部業務、投資3,900萬美元在底特律郊區三個地方增加363個新工作崗位。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691865_IVT98ZPP5PJFPD6PN55A9">
+                        
+                            <b>5. 客戶拉貨力道續增　倉佑新能源車營收佔比看增 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="more-link" onclick="toggleContent(3); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="summary">
+                        倉佑新能源車營收佔比持續增加，目前已有超過10%的營收來自於新能源車挹注。倉佑表示，隨著主要客戶的拉貨力道持續增溫，加上新升級的產品開發腳步不停歇，良好的訂單能見度，將持續為倉佑整體營運帶來長期正向發展。汽車變速箱市場預計在2023年至2030年間將以年複合成長率6.43%的速度增長，對倉佑與Tier1汽車零組件供應商保持良好業務開拓空間。倉佑2024年第1季表現良好，營收表現相較2023年同期成長21%，其中AM/OES的營收比重明顯較2023年第1季增加5個百分點，且絕對金額也年增59%。歸屬於母公司稅後淨利為0.79億元，較2023年同期成長159%。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.ctee.com.tw/news/20240509700215-430502">
+                        
+                            <b>6. 定穎Q2接單熱 獲利看增 (Source: 工商時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="more-link" onclick="toggleContent(4); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="summary">
+                        半導體公司定穎投控（3715）召開法說，公布第一季毛利率下滑6個百分點的消息，但表示看好本季接單優於上季，且HDI滿載、多層板稼動率升至90％～95％，對獲利仍持正向看法。公司未對特斯拉降價議題發表評論，但表示車用板採年度議價，2023年第四季針對2024年的議價，已經在第一季反映，ASP降幅約3％～5％。定穎預期以汽車板、網路通訊及服務器產品為成長動能，對獲利維持正向看法。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691889_KLA9STKI7ZUUVQLEZ41JQ">
+                        
+                            <b>7. Musk裁Tesla超充部門　NACS標準前途如何？ (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="more-link" onclick="toggleContent(5); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="summary">
+                        特斯拉執行長Elon Musk裁撤超級充電站部門，可能導致一些車廠重新考慮採用北美充電標準（NACS）的計畫。然而，NACS充電標準更佳，特斯拉仍將繼續採用，其他已跟進採用的車廠也不應放棄。特斯拉向所有供應商發送一封電子郵件，稱雖然撤掉超充部門，但仍在嘗試建立與供應商的合作方式、以及建立新的領導角色。一些汽車製造商召開了會議，討論是繼續計畫中的NACS過渡、還是取消採用NACS的計畫。福特和Rivian的電動車可透過轉接器，在特斯拉超充站網路上進行充電，但其他車廠還不能。特斯拉計劃在2024年春天向更多品牌提供支持，包括通用汽車、Volvo、Polestar，之後還會有更多車廠加入。特斯拉最終仍會重新僱用一些人回到該部門，並繼續開發和安裝其充電系統。此外，NACS現已脫離特斯拉掌控，成為一個真正的標準，且是特斯拉不再能控制的標準。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=9&id=0000691662_4VC57EFP75J70P1VJ8MM2">
+                        
+                            <b>8. 晶片戰爭作者Chris Miller：印度有潛力造本土品牌　取代中企在當地主導地位 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="more-link" onclick="toggleContent(6); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="summary">
+                        印度有機會打造出贏過小米等中國企業的本土品牌，並取代中企在當地市場的主導地位。印度手機業者可以自行創建本土品牌，並向美國、台灣或日本等地採購零組件，以取代小米或其他品牌。印度擁有龐大市場的優勢，足以支撐當地電子生態系。若美國、台灣與日本業者與印度公司合作，在當地市場打造產品甚至出口銷售，有望削弱中國的市場影響力。印度可考慮從電動車、醫療設備等新興領域來進攻，以降低供應鏈風險。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=9&id=0000691597_7X74Y5Q6LDC63Z6JR4SUY">
+                        
+                            <b>9. 日本環保、太空找盟友　美國之後找上歐盟 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="more-link" onclick="toggleContent(7); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="summary">
+                        日本在與美國達成環保和太空合作後，現在又找上歐盟建立合作關係和相關規範，以減低在環保領域對特定國家的依賴度，並推動雙方合作的太空計畫。在5月2日在法國首都巴黎召開的歐日高層經濟對話中，日本與歐盟商討了環保和太空事業的官方合作協調，這可視為雙方進行合作的起步。此外，日本還將透過G7組織和其他國家加速減碳環保運動的推展，建立不依賴特定國家的產業供應鏈，並聯合應對各種公私組織的資安攻擊等事項。日本希望與22個國家組成的歐洲太空總署合作，從2026年起推動合作事業。日本與歐盟建立合作關係的原因是避免美國政策變數、減低對中國的依賴、看中歐盟市場、以及避免太空領域被新興國超車。各國開始協調，建立可獨立於中國以外的環保產業鏈，同時也需要合作確保存在感。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.ctee.com.tw/news/20240508702120-430502">
+                        
+                            <b>10. 客製化車用與高階運算訂單穩健 元山首季獲利大躍進 (Source: 工商時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="more-link" onclick="toggleContent(8); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="summary">
+                        元山第一季營收為9.07億元，營業利益3,068萬元，稅後純益4,684萬元，較去年同期增加6.57％、46.13％與153.68％，每股稅後純益（EPS）0.62元，大幅超前去年同期的0.27元。汽車電子佔44％，高階運算系統佔33％，生活科技系統佔20％，工業設備與其他佔3％。元山表示，現歐洲客戶占比達65％，訂單能見度達2025年，而新進的中國市場目前占比約35％，正積極與大型車廠合作開發Tier 1專案。另外，元山也以原有相變化冷凍控制技術為基礎，依客戶實際需求，高度專業與客製化設計發展液冷散熱與熱交換控制應用技術。展望2024年，元山指出，第二季為傳統家電採購出貨旺季，生活科技領域事業樂觀向上，而元山與知名品牌合作之高階造水機則預計在第三季正式上市，其高單價可望挹注營運成長動能。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691816_V2F9EGWI0Q1UYV7F6IVUA">
+                        
+                            <b>11. 車用晶片一線廠遇難　勒緊腰帶「省錢大作戰」 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="more-link" onclick="toggleContent(9); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="summary">
+                        近期車用晶片市場遭遇困境，多家大廠財報頻頻示警，包括德儀、意法半導體、恩智浦、英飛凌、日廠瑞薩電子、美系Microchip、安森美以及台積電等，對於車用晶片市場的展望都不樂觀。市場對於晶片的需求理論上應持續上漲，但現階段電動車銷量不如預期，導致車用晶片出現庫存積壓的情況。各大廠的業績都有不同程度的下滑，英飛凌更表態已啟動「重大成本消減計畫」，藉此展開省錢大作戰。在車用晶片市場中，部分通用型晶片已經不再缺貨，而功率半導體、記憶體晶片等需求仍然較為緊俏。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.ctee.com.tw/news/20240509700243-430502">
+                        
+                            <b>12. 亞泰金屬首季獲利 寫同期次高 (Source: 工商時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="more-link" onclick="toggleContent(10); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="summary">
+                        台灣亞泰金屬公布2024年第一季合併營收達3.67億元，年增7％，創近六季度營收新高，第一季稅後純益4,507萬元、年增48.62％，第一季每股稅後純益（EPS）達1.82元，年增41.09％。亞泰金屬表示，受惠產品於客戶端驗收進度良好，創造營收新高，且本季認列營收產品組合自製率逐漸提高，2024年第一季整體毛利率達20％、營業利益率達11％水準，帶動整體營運獲利表現。隨著二廠正式啟用，有助於增加整體設備自製率，提升亞泰金屬的市場競爭力，以期創造未來營運保持良好的成長動能。
+                    </div>
+                    
+                
+            <body>
+                <h2 class="application">Mature Application</h2>
+                
+                <body>
+                    <div class="title">
+                    <a href= https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691589_28X4T3CH9VUFFJ8OR5CG2>
+                    
+                        <b>1. iPad OLED面板出貨樂金勝三星　韓業界疑蘋果別有居心 (Source: 電子時報)</b>
+                    </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div id="content">
+                    根據調研機構DSCC的報告，蘋果（Apple）計劃在2024年推出11吋、13吋OLED iPad Pro，其中的面板出貨量預計將由樂金顯示器（LG Display；LGD）以逾65%佔比，領先三星顯示器（Samsung Display；SDC）。然而，南韓業界對此表示懷疑，認為蘋果對南韓兩家面板廠提出相對嚴苛的要求，可能試圖將銷量與出貨低迷「責任」轉嫁給南韓面板製造商。據DSCC指出，LGD單獨生產13吋機種OLED，並且又增加了11吋機種的OLED產量，因此預估在2024年2~5月的iPad OLED面板出貨中，13吋機種佔比逾60%。DSCC進一步表示，11吋機種上市價格低於13吋機種，因此接下來可以期待之後銷量逐漸增加。
+                    </div>
+                
+            </body>
+        
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?CnlID=1&Cat=30&id=0000691711_FBD8H0QS0I6OY32L9S6U9&wpidx=4">
+                        
+                            <b>2. iPad Pro帶動OLED刮大風？供應鏈：得先過兩道關卡 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="mature-more-link" onclick="toggleMatureContent(0); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="mature-summary">
+                        蘋果最新發表的iPad Pro首度搭載OLED螢幕，外界預期OLED應用在IT產品上將快速颳起大風，但LCD陣營指出，在此之前，OLED螢幕還有兩大關卡要過。蘋果在2024年正式將iPad Pro面板切換至OLED技術後，預期將帶動OLED面板滲透率迅速攀升，群智諮詢預估，滲透率有望從2023年的2%提升至2024年的5%，其中，蘋果的需求佔比約佔6成。OLED面板技術在平板電腦領域的應用進程平緩，主要原因在於高昂的成本，同時也造成市場對於OLED技術接納度的重大阻力。目前OLED平板電腦的主要面板供應商包括有韓國的三星顯示器、中國的京東方以及和輝光電等，至於終端品牌業者則含括三星電子、聯想、華為等，產品均定位在高階旗艦機型上。在OLED高世代產能開出來以及良率提升上來之前，LCD陣營仍有些時間，但長期而言，面對OLED的競爭壓力恐難以避免。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/5612/7950984?from=edn_subcatelist_cate">
+                        
+                            <b>3. Apple iPad Pro 出貨恐下修？研調預估出貨量曝光 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="mature-more-link" onclick="toggleMatureContent(1); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="mature-summary">
+                        集邦（TrendForce）研調預估，2024年AMOLED iPad Pro 11吋和13吋合計出貨量預估僅450~500萬台，相較前一代售價提升200美元，加上iPad Air也同步推出13吋產品，也可能因火力分散而排擠潛在的需求。不過，iPad Pro系列導入AMOLED面板意味著AMOLED技術往中尺寸面板發展邁向新的里程碑，2024年整體AMOLED平板出貨量約為900萬台，約占整體平板市場的7%。AMOLED技術往IT產品拓展的關鍵在於改善效能與壽命，可分為材料穩定性提升、新技術導入、高世代廠的加入三個方向。其中，Tandem技術可提高光電轉換效率和發光亮度，適用於手機、電視顯示、頭戴式顯示裝置、汽車智能顯示螢幕等領域。大世代的產能布局將有利於未來的市場滲透率。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/5612/7951202?from=edn_subcatelist_cate">
+                        
+                            <b>4. TrendForce估2024年Apple iPad Pro出貨450至500萬台 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="mature-more-link" onclick="toggleMatureContent(2); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="mature-summary">
+                        根據經濟日報的報導，TrendForce預估2024年Apple iPad Pro出貨量約為450至500萬台。蘋果在5月的新品發布會上推出了主打AMOLED屏幕的平板產品，其中Pro版本的AMOLED螢幕採用雙層串聯結構，以改善AMOLED螢幕長期存在的燒屏及壽命問題。由於晶片升級和規格提升，新一代的iPad Pro的售價相較前一代提升200美元。TrendForce表示，AMOLED iPad Pro的出貨量確實較過往iPad Pro系列的規模有所收斂，但是這也意味著AMOLED技術往中尺寸面板發展邁向新的里程碑。除此之外，報導也提到了改善AMOLED效能與壽命的幾個方向，包括材料穩定性的提升、新技術的導入以及高世代廠的加入。其中，Tandem技術被認為是效能與壽命提供了一個立即的解決方案，並且可以應用於更廣泛的應用領域。然而，由於Tandem AMOLED的製造過程相對複雜，需要精確控制多個不同材料的層厚和堆疊順序來維持光學及發光均勻性，因此良率提升和成本優化將是後續所要面對的重要課題。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.ctee.com.tw/news/20240509700058-430502">
+                        
+                            <b>5. 新iPad Pro驚喜 台鏈好盼頭 估這兩檔成最大受惠股 (Source: 工商時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="mature-more-link" onclick="toggleMatureContent(3); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="mature-summary">
+                        蘋果在發表會上推出新一代的iPad Pro，其中搭載M4晶片，比上一代更輕薄，被視為AI PC換機前哨戰，摩根士丹利證券預估整體iPad今年出貨量將年增5％，上看5,300萬～5,400萬台。外資估計，iPad相關供應鏈廠商中，占其營收比重在雙位數百分點以上者有：GIS-KY、瑞儀、台郡、臻鼎-KY、仁寶、譜瑞-KY等，其中，前二者營收比重都在5成以上。因此，台系蘋果供應鏈將會受惠。此外，TrendForce預估，2024年AMOLED iPad Pro 11吋和13吋合計出貨量預估約450萬～500萬台，而金控旗下投顧研究機構指出，iPad在平板電腦全球市占第一，高達38％。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://finance.technews.tw/2024/05/08/foreign-investor-see-novatek-2024-q1-financial-report/">
+                        
+                            <b>6. 聯詠 Q2 財測保守「外資看法兩樣情」，喊目標價 435~680 元 (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="mature-more-link" onclick="toggleMatureContent(4); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="mature-summary">
+                        聯詠科技舉辦第一季法說會，第一季財報表現強勁，但第二季財測較保守，外資看法不一。海通國際看好聯詠在iPhone OLED業務成長，目標價上調至680元；大摩認為近期庫存去化可能影響股價，但聯詠透過降低成本和提供新產品支援全球市場，給予目標價666元，兩間外資都評級優於大盤。此外，海通國際也看好聯詠在ASIC業務潛力方面，與Arm合作將進一步擴大業務範圍，2025~2026年仍會擴大邊緣AI業務。另一間外資CLST則認為聯詠整體業務缺乏新的成長動力，重申賣出，目標價下調至435元。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691831_U5T7NBOI4SE65X05QA5UT">
+                        
+                            <b>7. M4晶片登場　蘋果自信iPad Pro擁有當前最好NPU (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="mature-more-link" onclick="toggleMatureContent(5); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="mature-summary">
+                        蘋果公司推出新款iPad Pro，搭載M4晶片，採用台積電第二代3奈米製程，CPU為10核心，分別是4效能核心和6節能核心。M4 GPU則為10核心，並首次將動態快取、硬體加速光線追蹤和網格著色帶到iPad上，提升了渲染效能和遊戲體驗。蘋果宣稱M4擁有市面上最好的NPU，最快每秒可執行38兆次運算，並在剪片程式Final Cut當中能快速辨識物件，達到「一鍵去背」的效果。蘋果未來搭載M4家族晶片的Mac也值得期待。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691820_0V19SD121601FF1LBOIZL">
+                        
+                            <b>8. 3分鐘看完蘋果發表會　OLED iPad Pro搶搭M4、Apple Pencil與巧控鍵盤更強大 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="mature-more-link" onclick="toggleMatureContent(6); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="mature-summary">
+                        蘋果（Apple）在最新的「Let Loose」發表會上，推出了全新的iPad Air 6和iPad Pro，其中iPad Pro搭載了蘋果最新的M4處理器晶片和OLED顯示面板，並配備了全新的Apple Pencil Pro和巧控鍵盤。此外，蘋果也推出了iPad版的Final Cut Pro 2、Logic Pro 2以及全新Final Cut Camera等專業應用程式。iPad Air 6分11吋和13吋兩種型號，搭載M2處理器晶片，起售價分別為599美元和799美元；iPad Pro也有11吋和13吋兩種型號，起售價分別為999美元和1,299美元。新一代Apple Pencil Pro售價為129美元，巧控鍵盤分別售價299美元和349美元。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/11162/7949330?from=edn_subcatelist_cate">
+                        
+                            <b>9. 蘋果發表會4大新品實機一次看 13吋 iPad Pro 薄得太驚人 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="mature-more-link" onclick="toggleMatureContent(7); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="mature-summary">
+                        蘋果在今年的發表會上，重點介紹了iPad系列的全新設計和功能，包括iPad Air、iPad Pro、Apple Pencil Pro和巧控鍵盤。其中，最令人矚目的是新款iPad Pro，提供13吋和11吋2種尺寸選擇，機身極薄，13吋機型甚至厚度僅有5.1mm，重量比前一代減輕近110克。螢幕採用串聯式OLED技術的Ultra Retina XDR顯示器，並搭載最新一代M4晶片，使其達到超輕薄設計、絕美顯示器和超狂效能。此外，新款iPad Air搭載M2晶片，提供13吋和11吋2種尺寸選擇，速度比先前搭載M1的iPad Air快將近50%。Apple Pencil Pro則加入全新感測器，雙指按壓筆桿即可叫出工具列，內建的陀螺儀則讓使用者能夠透過轉動Apple Pencil Pro來改變筆刷的粗細與筆觸。巧控鍵盤設計也經過更新，新增了一排功能鍵列，觸控板也加大了一些、觸覺回饋反應更靈敏。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691244_CMT310K8334SB054MGU1W">
+                        
+                            <b>10. Meta AR眼鏡開發新進展　採用Micro LED與碳化矽光子波導 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="mature-more-link" onclick="toggleMatureContent(8); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="mature-summary">
+                        Meta AR眼鏡的開發有了新的進展，採用了Micro LED和碳化矽光子波導技術，這使得該眼鏡具有更寬廣的視野，能夠提供前所未有的沉浸體驗。Meta已經投入了8年以上的時間進行AR眼鏡的研發，並計劃在2024年向特定開發人員展示第一款AR眼鏡，代號為Orion。然而，高昂的技術成本使得Meta開發中的AR眼鏡裝置可能無法成為一款真正的產品。報導指出，Meta的目標是在2027年左右推出AR眼鏡產品，為了能夠大量生產AR眼鏡，Meta會在實際產品中使用降階的零件，如改用LCoS顯示和玻璃波導。此外，碳化矽光子波導技術的出口受到美國政府嚴加管制，這意味著裝置只能在美國國內組裝，生產成本大幅提升。Meta這款開發中的AR眼鏡與Meta Ray-Ban智慧太陽眼鏡相當不同，將令人拭目以待。
+                    </div>
+                    
+                
+            <body>
+                <h2 class="application">Foundry Related</h2>
+                
+                <body>
+                    <div class="title">
+                    <a href= https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?CnlID=1&cat=40&id=0000691888_0AH9OUHZ78A2LG9PUJ075&wpidx=3>
+                    
+                        <b>1. 美禁令反作用力發威　中國晶圓代工結合晶片廠大殺價 (Source: 電子時報)</b>
+                    </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div id="content">
+                    受到美國禁令的限制，中國半導體行業遭受嚴重打擊。為了應對這種情況，中國政府加大對少數本土業者的扶植力度，並支持中芯和華為等相關供應鏈，以推進7奈米以下先進製程技術。此外，中國正在興建超過20座晶圓廠，聚焦40奈米以上成熟製程領域。然而，中國晶圓代工結合本土晶片廠的瘋狂砍價搶單已讓中國小廠退場，降低了國際大廠於中低階晶片市場的戰力。晶圓代工產業的產能過剩危機不斷升溫，而類似普冉模式的業者不少，殺價搶單情況暫不休止。在中國生存空間將快速萎縮。世界先進董事長方略先進也坦言，中國成熟製程產能大量開出，殺價競爭相當激烈，對於不參與低價戰的世界先進確實會有影響。
+                    </div>
+                
+            </body>
+        
+                    <div class="titles">
+                        <a href="https://finance.technews.tw/2024/05/08/intel-eats-up-early-asml-high-na-euv-production-capacity/">
+                        
+                            <b>2. 英特爾吃光初期 ASML High NA EUV 產能，但要獲青睞還有路要走 (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="foundry-more-link" onclick="togglefoundryContent(0); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="foundry-summary">
+                        英特爾宣布完成世界首套商用高數值孔徑（High NA）EUV曝光機安裝，此設備資約3.5億美元，將先訓練開發Intel 18A製程，之後量產Intel 14A。然而，英特爾吃光初期ASML High NA EUV產能，截至2025上半年，大部分High NA EUV訂單由英特爾全部吃下，ASML的High NA EUV產能每年約五至六套，代表英特爾將獲所有初始產能，所以三星和SK海力士2025下半年後才能獲得設備。英特爾晶圓代工邏輯開發部門曝光，英特爾年底將High NA EUV訓練開發Intel 18A製程，包括High NA EUV和標準0.33 NA EUV混合測試，之後Intel 14A製程進入量產。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/5612/7951039?from=edn_subcatelist_cate">
+                        
+                            <b>3. 力旺法說會／對今年營運成長有信心 權利金進入成長循環 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="foundry-more-link" onclick="togglefoundryContent(1); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="foundry-summary">
+                        矽智財（IP）廠力旺於8日召開法說會，對未來成長非常有信心。力旺在首季財報中營收為8.02億元，季減10.7％、年增20.2％，淨利為4.3億元，季增6.6％，每股純益為5.77元。對於台積電日前下修全球晶圓代工產業成長率，力旺總經理何明洲強調，對於今年營運成長很有信心，因為其IP布局版圖愈來愈多，將帶動今年授權金等大幅成長。而在權利金方面，庫存消化已告一段落，成熟製程產品會回到往年正常量產需求，加上力旺在過去3 年累積超過1,500個新產品設計定案，隨著客戶進入量產，可望帶動其權利金收入進入成長循環。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691838_M6J9SQT02OK3819MPAGQI">
+                        
+                            <b>4. 晶片市場復甦　格羅方德估2Q24營收優於預期 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="foundry-more-link" onclick="togglefoundryContent(2); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="foundry-summary">
+                        半導體代工廠商格羅方德（GlobalFoundries）公布2024年第1季財報，營收為15.49億美元，年減16%，淨利為1.34億美元，較去年同期減少47%。然而，格羅方德展望第2季營收將優於市場預期，介於15.9億~16.4億美元之間，並表示半導體需求將在過去多年該公司客戶庫存過剩導致的低迷後有所改善。格羅方德也獲得美國拜登政府15億美元半導體製造補貼，計劃將這筆補貼用於在美國紐約州馬耳他建設新的半導體製造設施，並擴大馬耳他和美國佛蒙特州Burlington的現有業務。此外，智慧行動裝置業務營收佔比最高，佔44%，通訊基礎設施與資料中心業務營收佔比為20%，排名第二，而汽車業務營收佔比則升至第三。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://finance.technews.tw/2024/05/08/globalfoundries-reports-first-quarter-2024-financial-results/">
+                        
+                            <b>5. 逐擺脫庫存包袱，格羅方德 Q2 財測樂觀、股價飆 7% (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="foundry-more-link" onclick="togglefoundryContent(3); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="foundry-summary">
+                        全球第三大晶圓代工廠格羅方德公布了最新財報，上季獲利輕鬆擊敗預期，並看好半導體產業擺脫庫存包袱，財測釋出樂觀訊號，股價聞訊勁揚逾7%。展望第二季，格羅方德預估營收介於15.9億美元至16.4億美元，調整後每股盈餘可達0.23美元至0.34美元，皆優於分析師平均預期的15.8億美元、0.29美元。格羅方德執行長表示，隨著半導體部分應用領域擺脫庫存調整壓力，他們積極提升創新和差異化價值。格羅方德股價大漲7.10%、收53.26美元，創2023年2月14日以來最大單日漲幅。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/5612/7951638?from=edn_subcatelist_cate">
+                        
+                            <b>6. 力積電日本廠傳提前量產 計劃2026年啟動28至55奈米製程 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="foundry-more-link" onclick="togglefoundryContent(4); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="foundry-summary">
+                        台灣晶圓代工廠力積電去年與日本SBI Holdings合資設立JSMC首座晶圓廠，選定日本宮城縣黑川區大衡村的第二北仙台中央工業園區。外媒報導，該廠有可能提前一年至2026年量產，提前搶食日本市場商機。力積電董事長黃崇仁強調，將以自行開發的22／28奈米以上製程及晶圓堆疊技術，搶攻多重應用，該廠預定量產28奈米至55奈米製程，初期月產能規劃1萬片，最終月產能目標將達4萬片，主要進攻車用晶片市場，晶圓廠位置將相當鄰近豐田工廠。另外，台積電也在日本熊本設立JASM晶圓廠，預計2024年12月起出貨，提供22／28奈米、12／16奈米製程產能，月產能也較最初目標4.5萬片，提升為5.5萬片12吋晶圓。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691817_CDP7S0YH2B5KQC6V6UOEH">
+                        
+                            <b>7. 英飛凌擴廠有後援　最大市場中國助轉運 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="foundry-more-link" onclick="togglefoundryContent(5); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="foundry-summary">
+                        半導體公司英飛凌在2024會計年度第2季財報法說會上宣布下修2024年資本支出，減幅達15%。英飛凌受惠於歐美科技主權潮流，在德國德勒斯登自建晶圓廠，入股台積電歐洲廠，並取得歐盟與德國的補貼奧援，助其擴建產能服務客戶。中國新能源汽車的高速發展，尤其是受惠於汽車電動化和智慧化的快速滲透，也讓英飛凌對於中國市場，動作頻頻。英飛凌在功率半導體和車用MCU這兩個領域穩坐第一名，2023年英飛凌的車用MCU營收年增上看44%，約佔全球市場的3成左右。英飛凌估計，在每輛汽車上的英飛凌半導體含金量超過800歐元。群智諮詢半導體事業部報告預測，新能源汽車產業的競爭主場將從電動化升級至智慧化，而在後者帶動下，車用晶片尤其是ADAS、智慧座艙SoC、車載CIS、光達感測器等需求仍高漲。
+                    </div>
+                    
+                
+            <body>
+                <h2 class="application">Others</h2>
+                
+                <body>
+                    <div class="title">
+                    <a href= https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691830_3FD9S3UC2MG9RL16MFKMK>
+                    
+                        <b>1. 資料中心耗電高　全科加速布局第三類半導體 (Source: 電子時報)</b>
+                    </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div id="content">
+                    IC通路商全科總經理謝宏昌表示，公司已針對資料中心及AI伺服器相關對光的需求提升，以及對電力使用消耗加速，進行營運策略調整。全科已與全球主要供應商合作，未來產業對光的需求市佔率將快速提升。此外，第三類功率半導體SiC/GaN的發展也很重要，有助於改善能源消耗的問題。展望後市，全科在東南亞市場的投入會持續加深，並引進更多符合當地內銷的產品線。
+                    </div>
+                
+            </body>
+        
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691657_PHF5ABC66AW4K96VUI9H8">
+                        
+                            <b>2. Rapidus研發先進封裝　中介層採面板級封裝技術 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(0); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        半導體公司Rapidus正在開發先進封裝和小晶片技術，並尋求更多的先進封裝客戶以實現2奈米晶片的量產。其中，中介層技術是連接晶片和基板的關鍵，而Rapidus正在研發一種使用600mm面板的中介層，以節省成本。然而，面板型中介層上堆疊多層晶片會導致面板變形，且還需要解決小晶片電路形成的微細間距問題。Rapidus還在研究柱式懸吊橋封裝技術。此外，Rapidus正在打造IC設計協助、前段製程、後段製程三位一體的商業模式，以搶攻AI晶片商機。日本經產省已三次補貼Rapidus，最近的一次針對後段製程新技術研發，提供535億日圓補助金。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://finance.technews.tw/2024/05/08/infineon-solid-q2-fy-2024/">
+                        
+                            <b>3. 庫存近谷底，英飛凌不畏財報利空股價飆近 13% (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(1); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        德國半導體大廠英飛凌公布最新財報，由於汽車供應鏈仍在努力去庫存影響，英飛凌再度下修全年財測，並宣布啟動撙節計畫。不過，由於產業庫存已近谷底，市場看好英飛凌超越財測目標，激勵股價強彈近13%。英飛凌2024會計年度第二季營收年減12%至36.3億歐元，其中汽車電子事業部貢獻20.8億歐元，為挹注英飛凌營收的最大金雞母。英飛凌預估2024會計年度營收落在151億歐元，上下浮動4億歐元，低於先前預測的160億歐元，上下浮動5億歐元。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691761_QQK8L8JJ5U6WAE2ADPWT3">
+                        
+                            <b>4. 馬國封測大擴產商機誘人　台設備廠積極布局瞄準大單 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(2); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        馬來西亞已成為東協半導體新重鎮，逐漸形成半導體產業聚落，尤以封裝測試最為發達，吸引台灣半導體設備業者如帆宣、均華、均豪、台達電、上銀等多家業者前往參訪尋求合作機會。隨著地緣政治風險加劇，馬來西亞成為全球半導體產業分散生產風險的主要受益區域之一，手握全球近13%封測市佔，相關業者包括英特爾、日月光、AmKor、通富微電、華天等至少50多家跨國企業。多家OSAT廠也在馬國設廠，如美光、英飛凌、恩智浦、德儀、意法、安森美、瑞薩、羅姆、環球晶、村田與華新科等。晶圓廠方面，歐司朗在馬來西亞檳城、居林及新加坡皆有廠，還有富士電機、MIMOS Semiconductor、X-FAB Silicon Foundries，以及馬來西亞本土8吋晶圓廠SilTerra等。對台灣廠商而言，馬來西亞有多家大客戶，且在成本與工作文化、人才方面也具有優勢，因此成為台廠積極布局的重點區域。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://technews.tw/2024/05/08/us-revokes-intel-qualcomm-licenses-huawei/">
+                        
+                            <b>5. 美國再縮廠商生存空間！撤銷英特爾、高通供應華為晶片許可 (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(3); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        美國政府已撤銷英特爾、高通等公司供應華為半導體的許可證，此舉可能對有業務往來的美國供應商造成影響。撤銷許可證除了損害華為，也可能影響有業務往來的美國供應商。由於擔心華為可能進行間諜活動，白宮2019年將華為列入貿易限制名單，意味供應商出貨前必須申請許可證。但即使如此，華為供應商仍獲價值數十億美元許可，出售商品和技術給華為，包括允許英特爾2020年起出售CPU。美國共和黨眾議員認為，政府撤銷許可證的行動將加強美國國家安全，保護美國智財權，削弱共產主義中國技術進步能力。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691826_7Q398DKW17GPMS7O9M6P2">
+                        
+                            <b>6. 英特爾與高通對華為專售傳撤銷　料對二業者衝擊不大 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(4); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        美國政府決定撤銷英特爾和高通向中國華為銷售NB和手機晶片的許可。然而，外界分析指出，對於這兩家公司的影響應該有限，因為華為PC全球市佔率原本就不高，英特爾對華為銷售額應該不大；高通原本就預期與華為之間的業務往來，可能很快會降至零。華為在2019年被美國商務部列入實體清單，因此在一般情況下，美國供應商並不被允許向華為供貨。2020年底，川普政府時代的商務部向英特爾發出特別許可，開放高階NB處理器向華為銷售。到了拜登政府上台後的2021年初，英特爾競爭對手超微也曾向當局申請銷售許可，一直沒有得到回應。據調研機構NPD與GfK統計資料顯示，在華為銷售的NB裝置中，超微晶片所佔比率從2020年的47.1%，快速下滑至2023上半年的9.3%。與此同時，英特爾則從52.9%大幅上升至90.7%。導致兩家業者到2023年初為止，產生至少5.12億美元的營收落差。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691907_OCSLKLAZL0B90E8Y55OAX">
+                        
+                            <b>7. NPU趕上AI炫風　蘋果M4是小升級或大躍進？ (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(5); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        蘋果新款iPad產品搭載M4晶片，其中神經網路引擎是當前所有AI PC晶片中最好的NPU，每秒可執行38兆次運算（TOPS）。M4晶片採用台積電第二代3奈米製程，CPU為10核心，GPU為10核心，並加入動態快取、硬體加速光線追蹤和網格著色等功能，渲染效能比M2提升4倍。不過，M4只能說是M3更精良的版本，並可能不會在寶座上待太久，因為高通即將推出的Snapdragon X Elite，其NPU將可執行45 TOPS。蘋果也多以M2為比較基準，一來是因為M3並沒有相對應的iPad產品，二來看起來顯得進步更多。M3系列晶片在2023年10月初次登場，目前對應的產品有MacBook Pro、MacBook Air以及iMac。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?CnlID=1&cat=40&id=0000691899_LHL9EBET80T488L05E58X&wpidx=3">
+                        
+                            <b>8. N3E製程隨M4晶片首發登場　台積3奈米月產能10萬片不夠用 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(6); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        台積電第二代3奈米製程（N3E）的M4晶片首次亮相於蘋果新款iPad Pro上，該製程近日才正式進入量產，蘋果成為首位客戶。台積電3奈米製程產能利用率已達95%，隨著全新iPad Pro放量、下半年iPhone 16系列面市，以及聯發科、高通、英特爾等大客戶新品登場，3奈米將達滿載盛況，預計代工報價近2萬美元的3奈米家族，2024年佔台積電營收比重將達15%上下。此外，台積電也推出新技術A16，結合超級電軌架構與奈米片電晶體，預計於2026年量產，可提升效能與邏輯密度。台積電明確揭露3/2奈米與最新的A16製程藍圖，並在海外擴產，持續拉開與三星電子、英特爾的差距。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://technews.tw/2024/05/08/asus-to-unveil-first-qualcomm-snapdragon-x-elite-based-laptop-on-may-20th/">
+                        
+                            <b>9. 迎 AI PC 新世代，華碩將發表首款 Snapdragon X Elite 新筆電 (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(7); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        華碩將在台灣時間5月21日舉辦線上發表會，推出搭載Snapdragon X Elite處理器的Vivobook S 15，並預告高通和微軟的代表也將出席。Snapdragon X Elite是採用Arm架構Oryon CPU核心的產品，具有高性能、AI加速並能延長電池續航力，預期將在未來幾季對PC市場帶來重大影響。新款筆電將開創華碩AI PC新世代，打破傳統界限並利用先進AI功能，全面支援華碩和微軟最新的AI功能，提供根據個人需求量身打造的AI體驗。華碩也規劃在今年台北國際電腦展展出一系列PC和周邊新品。微軟一年一度Build開發者大會也將在台灣時間22日至24日舉行，預期發表Windows、Copilot最新進展，以搭配PC製造商的AI PC新機。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?CnlID=1&cat=70&id=0000691921_KSF8236K3X213E0RRTVQZ&wpidx=3">
+                        
+                            <b>10. 每日椽真：蘋果成為台積電N3E首位客戶 | 人形機器人三巨頭之爭白熱化 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(8); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        根據電子時報報導，以下是今日科技供應鏈重點新聞摘要：
+
+1. 英特爾傳將取得多台ASML高數值孔徑（High-NA）極紫外光（EUV）設備，使得三星電子、SK海力士等南韓業者最快可能要到2025年下半，才能引進High-NA EUV設備。
+
+2. Tesla執行長Elon Musk裁撤超級充電站部門，可能導致一些車廠重新考慮採用北美充電標準（NACS）的計畫。但外界分析認為，NACS充電標準更佳，Tesla仍將繼續採用，其他已跟進採用的車廠也不應放棄。
+
+3. 在AI大模型的加持下，2024年可謂人形機器人元年，自年初便不斷有機器人開發商接力釋出旗下人形機器人的最新進展搶盡市場目光。
+
+4. 蘋果推出歷來幅度最大更新的iPad Pro，搭載採用台積電第二代3奈米製程（N3E）的M4晶片效能與功能大躍升，台積電近日才正式宣布N3E進入量產，也就是說，蘋果為N3E首位客戶。
+
+5. 平板電腦近年成長停滯，對系統組裝廠來說，近年iPad非蘋果主力，加上平板電腦產業成熟，動能有限，系統組裝將以拼量及零組件整合來衝刺獲利。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.ctee.com.tw/news/20240509700210-430501">
+                        
+                            <b>11. Skyworks狀告康希 立積拚迎轉單 (Source: 工商時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(9); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        美商Skyworks向中國陸廠康希通信提起專利侵權訴訟，主張康希通信侵犯五項專利，並索賠損失之三倍。康希通信表示，專利具有地域性，銷售市場以大中華區為主。然而，台系射頻IC業者立積將有望迎來轉單，因為立積在WiFi領域深耕已久，目前中國大陸電信商需求相當強勁，同時看好下半年不論中國大陸及全球市場都可望重回成長動能。立積手握628個全球專利，其中WiFi FEM占營收比重約4成，且在WiFi 7射頻模組之Design-in、Design-win專案數量呈現倍數成長，因此可快速遞補現有供應缺口。立積將成為最大贏家。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.ctee.com.tw/news/20240509700159-430501">
+                        
+                            <b>12. 力積電日本廠擬提前投產 (Source: 工商時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(10); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        台灣半導體龍頭公司力積電與日本金融集團SBI控股在日本宮城縣合建新廠，由於日本政府補助金額未明確，該廠是否能提前一年投產還有待觀察。力積電表示，對於建廠時程是否提前，公司沒有評論，但未來隨著建廠進度將持續和日方保持討論，針對建廠及生產技術提出協助並全力配合。該合作模式為日方負責籌資，力積電則提供建廠協助及半導體晶圓廠技術支援，且獲得的授權金將再投入合資的JSMC公司。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/5612/7951645?from=edn_subcatelist_cate">
+                        
+                            <b>13. 半導體供應鏈 搭上匯率順風車 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(11); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        根據經濟日報的報導，台積電和力積電在日圓匯率重貶的情況下，赴日蓋廠成本隨之下降，並搭上匯率順風車。力積電與日本金融集團SBI控股合資成立JSMC，首座晶圓廠選定落腳日本宮城縣大衡村工業園區，計畫投資8,000億日圓，第一階段生產預計2027年啟動，外電報導，可能提前一年至2026年，搶占先機。半導體供應鏈表示，除了赴日蓋廠有助於降低成本外，最重要的還是日本政府的補助力道，加上日本的供應鏈沒有台灣完整，整體而言，受惠匯率的變動下，「加減有些甜頭。」業界估算，晶圓廠在日本現在蓋廠加上日本官方補貼支持，估計成本至少減少一半，加上台日雙方交流原本就密切，赴日投資正是好時機。半導體周邊設備工程業者認為，半導體晶圓廠的建廠可從廠務及設備兩大工程來觀察。若是赴日建廠，其設備及材料轉而大量就近採購日系品牌，的確可以節省可觀的成本。不過，也有設備商認為，由於日本當地強項正是設備與材料，隨著日幣貶值，等於這些廠商外銷競爭力將遠大於台廠，成為雙面刃。此外，廠商在當地雇用日籍人力，付的是日圓薪資，對以台幣、或美元計價的台商而言，也具有匯率優勢。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/5612/7951717?from=edn_subcatelist_cate">
+                        
+                            <b>14. 美再鍘華為...筆電鏈洗牌 仁寶、緯創受惠大 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(12); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        根據經濟日報的報導，美國政府再次對華為開鍘，撤銷英特爾、高通晶片供貨許可，對華為筆電業務的殺傷力大，將導致大陸筆電品牌市占大洗牌。華為在大陸時下最夯的輕薄筆電市占率高達逾25%，因此，聯想將坐享龐大轉單，聯想筆電主力代工廠仁寶、緯創出貨跟著旺。業界認為，此舉將對華為筆電事業造成重創，當年美國對華為手機禁令，導致華為手機事業跌落神壇，榮耀、OPPO、vivo等在地品牌廠開始大舉分食市占大餅的劇本再度重演。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?CnlID=1&Cat=40&id=0000691846_1ZJ9M7KW3H0Y817YONAXT&wpidx=4">
+                        
+                            <b>15. 蘋果AI反擊戰發第一聲號角 M4晶片橫空出世有三重意義 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(13); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        蘋果在最新的iPad Pro發表會上推出了M4晶片，這是蘋果在AI領域反擊的第一聲號角。蘋果在發表會上多次提到M4在AI運算上的優異表現，並強調自身在NPU技術上的優勢。M4晶片的推出，不僅是為了取代PC應用成為專業工作的另一種選擇，更是為了搶下AI PC話語權。蘋果在未來的AI市場上將會有許多和人機互動介面有關的革命性AI應用產生，而這樣開放式的思維將成為蘋果在未來AI市場上的一個重點競爭利基。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://technews.tw/2024/05/08/china-lingjiu-gp201-hits-mass-production/">
+                        
+                            <b>16. 中國顯卡生力軍！成立三年實現國產 GPU，稱「性能超越 AMD」 (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(14); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        中國凌久微電子成功研發出自家第二代圖形處理晶片GP201，號稱性能比AMD E8860嵌入式顯卡更強大。GP201在3D性能、2D多邊形繪製、橢圓繪製、畫素和圖像搬移、視窗繪製、OpenCL庫國產化平台應用支援等方面強於AMD E8860嵌入式顯卡。此外，GP201 GPU 支援多款中國國產處理器與操作系統，單精度浮點算力達1.2Tflops，支援4K 60Hz顯示、H.265解碼，最高功耗30W，目前已經推出全高、半高、MXM等型態的五款顯卡產品。雖然量產中國發售，但美國購物網站還找不到這款顯卡。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/11162/7949129?from=edn_subcatelist_cate">
+                        
+                            <b>17. 聯發科最強手機晶片「天璣9300+」 PK 高通 營運添動能 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(15); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        聯發科在深圳舉行的天璣開發者大會上推出最新5G旗艦手機晶片「天璣9300+」，這款晶片採用全大核CPU架構，八核CPU包含四個Cortex-X4超大核，最高頻率可達3.4GHz，另配置四個主頻為2.0GHz的Cortex-A720大核，並支援廣泛的大型語言模型（LLM），可提供卓越的性能表現，加快LLM推理速度，可為使用者提供文字、圖像、音樂等裝置端生成式AI多模態體驗。該款晶片已獲vivo、小米等大陸手機品牌採用，若該款新晶片獲得更多品牌導入，不僅有助聯發科衝刺營運，也將為台積電先進製程訂單增添動能。聯發科的天璣AI開發套件主要有四大項目，已涵蓋智慧手機、智慧汽車、物聯網、個人電腦等智慧終端裝置，有利各領域生成式AI應用的開發。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://finance.technews.tw/2024/05/08/morgan-stanley-is-optimistic-that-mediatek-will-join-hands-with-huida-to-seize-ai-pc-business-opportunities/">
+                        
+                            <b>18. 大摩看好聯發科攜手輝達搶攻 AI PC 商機，力挺目標價 1,388 元 (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(16); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        大摩看好聯發科和輝達攜手進軍AI PC市場，並提高聯發科的投資評等和目標價。聯發科正在打造Arm PC的運算營收來源，並與輝達合作推出車用晶片。這款採用Arm架構的AI晶片可能會在2025年中上市，對聯發科的應收貢獻分別為2%和5%。大摩認為這將使得AI PC市場成為聯發科智慧型手機和ASIC之後的第三個營收重要來源。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/11162/7949151?from=edn_subcatelist_cate">
+                        
+                            <b>19. 聯發科預估 AI 手機...三年後逾10億支 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(17); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        聯發科推出全新AI手機晶片「天璣9300+」，並與研調機構Counterpoint攜手多家生態夥伴，聯合發布「生成式AI手機產業白皮書」。白皮書預估生成式AI手機到2027年將超過10億支，成為智慧手機產業發展的主旋律，並為行動網路生態系注入強勁新動能。生成式AI手機擁有強大算力，具備多模態模型能力，能處理文字、圖片等多種形式的輸入，典型應用包括翻譯、圖像生成與影片生成等。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://technews.tw/2024/05/08/foreign-investor-see-tsmc-arm-based-chips/">
+                        
+                            <b>20. Arm CPU 成長動能大過英特爾外包！大摩點讚台積電目標價近千元 (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(18); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        大摩發表報告指出，台積電在 Arm CPU 架構表現優於英特爾外包 CPU，且有更多成長動能。隨著 AI 熱潮持續，台積電的代工市場占比應上升，因為該公司幾乎 100% 製造 Arm CPU，而 x86 CPU 的製造率僅 30%。大摩預期到 2028 年，台積電在包括 Arm 和 x86 的 CPU 市場中，代工占比將從 2023 年的 37% 升至 60%，五年內將貢獻 15-20% 營收。台積電未來成長更依賴 Arm CPU 和 AI 半導體，而非英特爾 x86 CPU 外包。大摩認為，納入 WoA 處理器貢獻後，將台積電 2026 年每股盈餘預估上調 3% ，中期成長更佳。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691763_D8N8S09W586I974EMRAHI">
+                        
+                            <b>21. 幾個群聯「閒漢」打造超高CP值AI方案，助企業低成本入手生成式AI【Its 秀 time】Ft.群聯執行長潘健成 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(19); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        群聯科技執行長潘健成透露，群聯科技與幾位交通大學的學生合作，研發出高CP值的AI運算與儲存方案，實現HomeComputing的AI解決方案。生成式AI的導入成本高，99.9%的企業難以跨越，因此地端AI成為了一個低成本的解決方案。群聯科技攜手技嘉、華碩與聯發科建立AI夥伴關係，重新活化供應鏈，幫助台灣PC產業重回榮耀。此外，潘健成還分享了他眼中的陽明交大學生特質，以及地端AI解決方案在全球遍地開花的現象。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691799_MAU62KGOLRZXCT8XVDCQO">
+                        
+                            <b>22. 維繫台灣半導體優勢　國科會主委吳政忠提兩大策略 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(20); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        國科會主委吳政忠向總統蔡英文報告，台灣半導體產業領先全球的優勢至少還有15年，這段期間應善用兩大策略，才能持續鞏固立基。吳政忠提到的兩大策略包括：一，應持續擴大上、中、下游供應鏈，從IC設計到設備、材料、化學品等，讓技術落地更成熟，其中引導性的關鍵就是IC設計；二，應擴大育才、留才、攬才，持續增加台灣半導體研究學院的量能，將IC設計產業人才留在台灣，同時擴大國外攬才，在東歐或其他國家設置海外基地。行政院副院長鄭文燦表示，吳政忠的看法獲得蔡英文的支持。推動「晶創台灣方案」相當重要，希望將台灣半導體產業領先全球15年的優勢加乘發揮，成為世界信賴的科研夥伴，也成為各國硬體「友岸外包」的一員。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/11162/7951716?from=edn_subcatelist_cate">
+                        
+                            <b>23. 華為NB面臨斷料...雙A得利 宏碁、華碩有望分食市場 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(21); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        根据经济日报的报道，华为笔记本市场面临断料危机，受美方管制英特尔处理器供货的影响，华为笔记本市场份额将面临“灾难性影响”，台湾的宏碁和华硕有望分食华为市场，扩大出货。华为在大陆市场占有优势，是当地前五大品牌中唯一正成长的厂商，但其主要笔记本大多采用英特尔处理器，若真的被美国限制，将产生灾难性后果。华为若无法采用英特尔处理器，短期将空出一片市场，将让前几大品牌搶食，包含联想、惠普、戴尔、宏碁、华硕等。此外，华为在商用市场外，市场也传出华为将针对一般消费性市场打造自研笔记本处理器，但目前尚未真正端出晶片。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/11162/7951730?from=edn_subcatelist_cate">
+                        
+                            <b>24. 美撤銷向華為供應晶片許可 威盛在陸布局處理器受惠 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(22); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        美國政府撤銷英特爾和高通向華為供應晶片的許可，可能影響英特爾對華為的筆電處理器供應，並密切觀察大陸自研筆電處理器在中長期是否能趁勢補上當地市場的需求缺口。威盛集團積極布局大陸筆電處理器，預料將可望受惠。威盛的子公司將部分處理器與晶片組相關技術與資料等，賣給上海兆芯。兆芯的PC／嵌入式處理器產品主要是開先系列，伺服器處理器產品則主要是開勝系列，該公司已成功開發量產六代高性能通用處理器。兆芯於3月獲得2024中國大陸IC設計成就獎當中的「年度中國優秀IC設計團隊」獎，並以開先KX-7000系列處理器獲得「年度最佳處理器產品獎」。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691880_UDD7H4TL9HBYBBL6CEL3N">
+                        
+                            <b>25. iPad量體與獲利有限　下游組裝拼量擠獲利 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(23); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        近年來iPad成長動能不足，對系統組裝廠來說，iPad已非蘋果主力，加上平板電腦產業成熟，動能有限，系統組裝將以拼量及零組件整合來衝刺獲利。研調機構Canalys統計，蘋果iPad仍是平板電腦的龍頭廠，但表現相對疲弱。供應鏈業者表示，由於平板市場持續萎縮，再加上市場競爭者持續造成獲利壓力，因此，台系組裝業者對iPad系列產品的訂單積極性不高。目前僅剩下鴻海在iPad系列的組裝上佔據了主力供應商的地位，而比亞迪已接替仁寶，成為iPad第二大系統組裝廠。iPad產品規模成長有限，且組裝競爭激烈，對於大型供應商如鴻海而言，仍有獲利機會。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691212_7SH12EHP2FCTEN14GZN20">
+                        
+                            <b>26. AI帶動HBM測試設備　但愛德萬估部分客戶投資仍疲軟 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(24); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        日本半導體測試設備製造商愛德萬測試（Advantest）公佈了2023年度財報，合併營收年減13.2％，合併營益年減51.3％，但2024年度業績將反轉向上，獲益於生成式人工智慧帶動的高頻寬記憶體需求。然而，整體業績恢復程度不如市場預期，因為車用、工業用、消費電子等客戶在2024年度上半年的投資疲軟，相關銷售額預料將比2023年度下半年更少。愛德萬測試預估，2024年度下半年開始，高效運算和人工智慧等高效能晶片的需求將上升，因為庫存設備的清理已告一段落，將需要購買新的測試設備。愛德萬測試最新估計的2024年系統單晶片測試設備市場約為29億至32億美元，比起3個月前的預估值下調了4億美元。在記憶體的測試設備市場，這次愛德萬測試預估的2024年市場規模是14億至17億美元，也有所下調。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.ctee.com.tw/news/20240509700154-430502">
+                        
+                            <b>27. 宏碁IPO老虎隊 4月業績齊揚 (Source: 工商時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(25); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        宏碁集團旗下的IPO子公司，包括建碁、展碁國際、倚天酷碁─創、海柏特及宏碁智醫等，4月營收皆有雙位數年增表現，步入第二季初始後，續展現成長動能。其中，建碁今年前四個月累計營收達21.99億元，年增32.12％，創19年來同期新高；展碁在納入代理AI伺服器產品之銷售業務後，4月合併營收亦有年增一成以上、達18.83億元的同期新高表現，前四個月累積營收73.93億元，年增7.32％，站歷史次高。倚天酷碁─創及海柏特分別達1.67億元及0.89億元，但也以22.4％及58.1％的年增幅，同步站同期新高。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://technews.tw/2024/05/08/advanced-packaging-becomes-a-popular-technology/">
+                        
+                            <b>28. 先進封裝成當紅炸子雞，封測產業迎接巨大轉變？ (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(26); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        台積電在北美年度技術論壇上發表多項先進半導體技術，其中包括創新的NanoFlexTM技術，支援奈米片電晶體、N4C製程、CoWoS、系統整合晶片、系統級晶圓（SoW）、矽光子整合和車用先進封裝等等。透過先進封裝技術，晶片運算效能得以提升，成為半導體業的發展主流，也成功為「摩爾定律」續命。然而，傳統封測產業是否將面臨發展風險與結構重組，也成為整個業界關注焦點。先進封裝技術主要應用於高性能、高整合度的設備中，如智慧型手機、伺服器、高性能計算設備等，而傳統封裝技術則更多的應用於成本敏感、技術要求不那麼高的領域，如消費電子、家用電器等。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://money.udn.com/money/story/11162/7951728?from=edn_subcatelist_cate">
+                        
+                            <b>29. 新ApplePencil Pro驚艷 台廠中探針助攻 (Source: 經濟日報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(27); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        蘋果在今年第一場新品發表會中推出新款iPad和Apple Pencil Pro，新款Apple Pencil Pro加入全新感測器，讓使用者只要雙指按壓筆桿即可叫出工具列，功能更強大。中探針扮演關鍵供應商角色，供應Apple Pencil相關的內部連結用針，並持續入列新Apple Pencil Pro供應商，後續將逐步放量，挹注營運。中探針主要經營探針及探針製品研發製造，產品廣泛應用於手機、NB、電動汽機車、半導體測試等，工廠位於新北市板橋與大陸。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://technews.tw/2024/05/08/hybrid-bonding-explicit-knowledge/">
+                        
+                            <b>30. Hybrid bonding 成先進封裝顯學，用這項技術生產最多晶片的公司不是台積電，是它！ (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(28); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        隨著摩爾定律的放緩，半導體產業越來越需要先進封裝技術推動晶片性能提升。其中，混合鍵合技術被視為革命性技術，能將晶片直接黏合在一起，並縮小接點間距，提高晶片連接密度。目前，SONY、AMD、英特爾等公司已經在商用產品中採用混合鍵合技術，而三星也計畫在未來的HBM4產品中採用此技術。然而，混合鍵合技術仍面臨多項技術挑戰，包括裸晶良率問題、高平整度鍵合介面等，需要進一步克服。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?CnlID=1&cat=30&id=0000691872_JV979H728T7WGC1PEC1Y0&wpidx=3">
+                        
+                            <b>31. 亞光董座賴以仁：今年有兩大成長動能　聚焦三大主軸 (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(29); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        台灣光學大廠亞光董事長賴以仁在法說會上表示，未來亞光將朝三大方向擴張，包括與南韓鏡頭模組大廠樂金Innotek（LG Innotek）策略合作、擴大菲律賓生產規模，以及超透鏡（Metalens）的未來布局。亞光與LG Innotek合作拓展車載及高階智慧型手機鏡頭市場，亞光將積極拓展車載及高階智慧型手機市場，2023年車用佔亞光營收佔比約4%，而2024年有望成長至9~10%。亞光擴大菲律賓廠生產規模，新廠預計2024年底完工投產，未來菲廠除了主要供美系業者的瞄準器以外，會有部分成品級產品轉移到當地新廠生產。此外，亞光已領先跨足Metalens領域，以此先進光學技術搶佔未來先機。亞光2024年展望，預計成長動能來自數位相機產品以及車用產品的成長。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://technews.tw/2024/05/08/tsmc-advanced-packaging-and-what-is-sow/">
+                        
+                            <b>32. 突破光罩尺寸限制、異質整合再進化：台積系統級晶圓 SoW 是什麼？ (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(30); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        台積電在北美技術論壇上宣布推出「系統級晶圓」（System on Wafer，SoW），該技術能夠在晶圓上放置更多電晶體，解決光罩尺寸和良率問題，使每瓦效能提升好幾個數量級。SoW 技術能實現異質整合，將不同製程、不同成本晶片進行整合。首款 SoW 產品採用以邏輯晶片為主的整合型扇出（InFO）技術，將提供高速運算客製化需求，且不需要額外 PCB 載板，就能將相關晶片整合散熱模組，加速生產流程。另一個 CoWoS_SoW 晶片堆疊版本預計 2027 年量產，採用光罩尺寸達 5.5 倍，可採用 12 個 HBM 記憶體堆疊，以及容納更大基板。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://technews.tw/2024/05/08/global-semiconductor-materials-market-to-decline-by-7-in-2023/">
+                        
+                            <b>33. 2023 年全球半導體材料市場下滑 7%，唯一逆勢成長是中國 (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(31); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        根據科技新報的報導，SEMI國際半導體協會的最新統計報告指出，全球半導體材料市場銷售金額在2023年將下滑8.2％，銷售金額為667億美元，其中晶圓製造材料下滑7％，晶片封裝材料下滑達10.1％，唯一逆勢成長的市場是中國。此外，報告指出，設施產能利用率降低是半導體材料用量減少的主因。台灣連續14年成為全球半導體材料最大消費國，中國因為需求成長達銷售額131億美元，維持第二名位置，韓國以106億美元銷售額排第三。其他地區半導體材料銷售都顯著下降。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://technews.tw/2024/05/08/the-power-supply-technology-behind-the-layout-of-tsmc-intel-and-samsung/">
+                        
+                            <b>34. 台積電、英特爾、三星背後供電技術比一比，力拚先進製程市場 (Source: 科技新報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(32); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        半導體業界中，供電線路占用空間的問題是一個重要的課題。為了解決這個問題，台積電、英特爾和三星都開發出了背面供電技術。台積電的 A16 製程採用超級電軌架構和奈米片電晶體，能夠提高運算速度和效率。英特爾的 PowerVia 技術能夠節省空間，改善供電和訊號傳輸，並有望降低成本。三星計劃在 2027 年的 SF1.4 製程中使用背後供電技術，能夠使耗用晶圓面積減少，提高整體性能，並降低功耗。這些技術的發展，對於半導體業界在先進製程市場中的競爭非常重要。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.ctee.com.tw/news/20240509700061-430501">
+                        
+                            <b>35. 背靠神山 力旺董事改選含積量高 (Source: 工商時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(33); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        半導體公司力旺今年改選董事，候選人名單包含台積電董事曾繁城、前台積電研發副總孫元成首次入列。力旺總經理何明洲表示，公司IP組合漸臻完備，如持續切入之HBM IP，已開始與國際前三大龍頭洽談；未來隨著HPC晶片邁向更先進製程技術，高密度SRAM快取記憶體更形重要。力旺於年初取得台積電N4P驗證里程碑，為高效能運算、AI、雲端伺服器等應用帶來更強大的NVM技術。力旺透露，正與台積電進行N5A製程，主攻汽車應用之OTP解決方案；N3P也有相當進展。力旺4月份合併營收達4.87億元，年增37％，反映庫存調整淡化、客戶恢復投片、晶圓稼動率改善及部分客戶新tape out轉量產，營運可望逐季好轉。
+                    </div>
+                    
+                
+                    <div class="titles">
+                        <a href="https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?cnlid=1&id=0000691856_J8B77QGN6DYTMH5UUPWQR">
+                        
+                            <b>36. 當沙國千億美元半導體與AI基金，遇上美中選邊站⋯⋯ (Source: 電子時報)</b>
+                        </a>
+                        <!-- 顯示更多内容的連結 -->
+                        <a href="#" class="other-more-link" onclick="toggleotherContent(34); return false;">
+                            內容摘要（點擊展開）
+                        </a>
+                    </div>
+                    <!-- 摘要内容 -->
+                    <div class="other-summary">
+                        沙烏地阿拉伯的千億美元半導體與AI基金Alat表示，如果美國提出要求，也會切斷與中國的合作關係。Alat正在美國尋求締結可信賴且安全的合作關係，並強調就半導體與AI產業而言，美國對於Alat來說不僅是首選合作夥伴，也是首選市場。目前正在與兩家美國科技業者建立合作關係，並與一家美國投資機構共同參與投資。沙國與阿聯都擁有角逐中東地區AI強權的企圖心。阿聯媒體國家報一份報告指出，隨著對生成式AI領域的投資持續成長，預計到2030年，海灣阿拉伯國家合作委員會6個成員國將創造出每年高達235億美元的經濟利益，其中沙國與阿聯分居第一、二名，各達到122億美元與53億美元。
+                    </div>
+                    
+                
+                </html>
+            
